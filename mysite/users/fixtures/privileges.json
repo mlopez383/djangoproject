@@ -1,0 +1,16 @@
+[
+  {
+    "model": "users.Privilege",
+    "pk": 1,
+    "fields": {
+      "privilege_name": "Administrator"
+    }
+  },
+  {
+    "model": "users.Privilege",
+    "pk": 2,
+    "fields": {
+      "privilege_name": "User"
+    }
+  }
+]
