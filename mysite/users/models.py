@@ -12,5 +12,4 @@ class User(models.Model):
 	password = models.CharField(max_length=64)
 	email = models.CharField(max_length=255)
 	last_visit_date = models.DateTimeField(blank=True, null=True)
-    
-    
+	

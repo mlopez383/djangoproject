@@ -6,7 +6,17 @@
       "privilege": 1,
       "login": "admin",
       "password": "123456",
-      "email": "admin@gmail.com"
+      "email": "admin@email.com"
+    }
+  },
+  {
+    "model": "users.User",
+    "pk": 2,
+    "fields": {
+      "privilege": 2,
+      "login": "user",
+      "password": "123456",
+      "email": "user@email.com"
     }
   }
 ]

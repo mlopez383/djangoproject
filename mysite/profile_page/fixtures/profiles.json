@@ -9,7 +9,22 @@
       "address": "510, Antezana St.",
       "city": "Cochabamba",
       "postal_code": "0000",
-      "phone": "+591 73609120"
+      "phone": "+591 73609120",
+      "published": "Yes"
+    }
+  },
+  {
+    "model": "profile_page.Profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "name": "Christian",
+      "surname": "Carr",
+      "address": "520, Antezana St.",
+      "city": "Boston",
+      "postal_code": "1000",
+      "phone": "+191 73609120",
+      "published": "No"
     }
   }
 ]

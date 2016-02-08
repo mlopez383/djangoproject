@@ -11,3 +11,4 @@ class Profile(models.Model):
     city = models.CharField(max_length=70, blank=True, null=True)
     postal_code = models.CharField(max_length=10, blank=True, null=True)
     phone = models.CharField(max_length=25, blank=True, null=True)
+    published = models.CharField(max_length=1, blank=True, null=True)

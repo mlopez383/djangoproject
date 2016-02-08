@@ -19,6 +19,7 @@ def index(request):
 		profile.city = request.POST['city'];
 		profile.postal_code = request.POST['postal_code'];
 		profile.phone = request.POST['phone'];
+		profile.published = request.POST['published'];
 		profile.save()
 		saved = True;
 

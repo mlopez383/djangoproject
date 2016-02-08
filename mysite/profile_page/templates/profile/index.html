@@ -35,11 +35,23 @@
                   <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" placeholder="Email address" required>
                 </div>  
               </div>
+
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="published">Published</label>
+                  <select name="published" id="published" class="form-control" >
+                      <option value=""> --- </option>
+                      <option value="Yes"{% if profile.published == 'Yes' %} selected="selected"{% endif %}>Yes</option>
+                      <option value="No"{% if profile.published == 'No' %} selected="selected"{% endif %}>No</option>
+                  </select>
+                </div>  
+              </div>
+
             </div>
           </div>
         </div>
 
-<br/><br/>
+        <br/><br/>
 
         <a name="personalinformation"></a>
         
