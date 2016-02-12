@@ -1,9 +1,19 @@
 {% extends "template.html" %}
 {% block content %}
     <div class="col-xs-12 col-sm-12">
-      <div class="jumbotron">
-        <h1>Hello, guest!</h1>
-        <p>This is an example to show the potential of Django with Bootstrap.</p>
-      </div>
+        <h2>Hello, guest!, below are shown the public profiles:</h2>
     </div>
+    {% for profile in profiles %}
+          <div class="col-sm-4">
+	          <div class="panel panel-success">
+	            <div class="panel-heading">
+	              <h3 class="panel-title">{{ profile.name }} {{ profile.surname }}</h3>
+	            </div>
+	            <div class="panel-body">
+	              City : {{ profile.city }}<br/>
+	              <a href="/profile/{{ profile.user.id }}">See more...</a>
+	            </div>
+	          </div>
+	      </div>
+        {% endfor %}
 {% endblock %}

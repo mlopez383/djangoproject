@@ -32,3 +32,14 @@ def index(request):
 		'saved': saved
 	}
 	return HttpResponse(template.render(context, request))
+
+def published(request, id):
+	user = get_object_or_404(User, id=id)
+	profile = Profile.objects.get(id=user.id)
+
+	template = loader.get_template('profile/published.html')
+	context = {
+		'user': user,
+		'profile': profile
+	}
+	return HttpResponse(template.render(context, request))

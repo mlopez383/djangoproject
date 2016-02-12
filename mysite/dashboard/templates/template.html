@@ -41,14 +41,13 @@
         <div id="navbar" class="collapse navbar-collapse">
           
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li{% if request.get_full_path|slice:"0:10" == "/dashboard" or request.get_full_path == "/"%} class="active"{% endif %}><a href="{% if request.session.user.userlogin %}/dashboard{% else %}/{% endif %}">Home</a></li>
             {% if request.session.user.userlogin %}
-              <li><a href="/profile">Profile</a></li>
+              <li{% if request.get_full_path|slice:"0:8" == "/profile" %} class="active"{% endif %}><a href="/profile">Profile</a></li>
             {% endif %}
           </ul>
           {% include "login/login.html" %}
         </div><!-- /.nav-collapse -->
-
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
 

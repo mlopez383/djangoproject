@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from users.models import User, Privilege
+from profile_page.models import Profile
 import time
 from datetime import datetime
 
@@ -24,5 +25,7 @@ def init(request):
         except User.DoesNotExist:
             serror = "The username or password are incorrect."
 
-    context = {'request': request, 'serror':serror}
+
+    profiles = Profile.objects.filter(published = 'Yes')
+    context = {'request': request, 'profiles': profiles, 'serror':serror}
     return render(request, 'home/index.html', context)
